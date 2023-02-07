@@ -1,0 +1,94 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Node.gd" type="Script" id=1]
+[ext_resource path="res://taust.webp" type="Texture" id=2]
+[ext_resource path="res://VT323-Regular.ttf" type="DynamicFontData" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 50
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 50
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 50
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 88
+outline_color = Color( 1, 0, 0, 1 )
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 50
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 50
+font_data = ExtResource( 3 )
+
+[node name="Node" type="Node"]
+script = ExtResource( 1 )
+
+[node name="taustapilt" type="TextureRect" parent="."]
+anchor_left = 0.829
+anchor_right = 1.0
+anchor_bottom = 0.097
+margin_left = -842.896
+margin_right = 6.0
+margin_bottom = 541.8
+texture = ExtResource( 2 )
+
+[node name="piupiu" type="RichTextLabel" parent="taustapilt"]
+margin_left = 28.0
+margin_top = 13.0
+margin_right = 263.0
+margin_bottom = 70.0
+custom_fonts/normal_font = SubResource( 1 )
+
+[node name="life" type="RichTextLabel" parent="taustapilt"]
+anchor_right = 0.039
+anchor_bottom = 0.033
+margin_left = 807.0
+margin_top = 481.0
+margin_right = 947.064
+margin_bottom = 549.2
+custom_fonts/normal_font = SubResource( 2 )
+fit_content_height = true
+
+[node name="score" type="RichTextLabel" parent="taustapilt"]
+anchor_right = 0.075
+anchor_bottom = 0.117
+margin_left = 774.0
+margin_top = 32.0
+margin_right = 908.2
+margin_bottom = 24.8
+custom_fonts/normal_font = SubResource( 3 )
+
+[node name="gameover" type="RichTextLabel" parent="taustapilt"]
+margin_left = 335.0
+margin_top = 68.0
+margin_right = 662.0
+margin_bottom = 187.0
+custom_colors/default_color = Color( 1, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 4 )
+fit_content_height = true
+
+[node name="ammo" type="RichTextLabel" parent="taustapilt"]
+margin_left = 19.0
+margin_top = 459.0
+margin_right = 230.0
+margin_bottom = 571.0
+custom_colors/default_color = Color( 0.219608, 1, 0, 1 )
+custom_fonts/normal_font = SubResource( 5 )
+fit_content_height = true
+
+[node name="efekt" type="RichTextLabel" parent="taustapilt"]
+margin_left = 312.0
+margin_top = 246.0
+margin_right = 763.0
+margin_bottom = 366.0
+custom_colors/default_color = Color( 0, 0.305882, 1, 1 )
+custom_fonts/normal_font = SubResource( 6 )
