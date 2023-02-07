@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/laul.mp3-f5886066394c7441eb34410f53218d65.mp3str"
+
+[deps]
+
+source_file="res://laul.mp3"
+dest_files=[ "res://.import/laul.mp3-f5886066394c7441eb34410f53218d65.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
