@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://player.gd" type="Script" id=1]
+[ext_resource path="res://polycat.dae" type="PackedScene" id=2]
+
+[sub_resource type="CapsuleShape" id=1]
+radius = 0.486972
+height = 0.514292
+
+[sub_resource type="Environment" id=2]
+ambient_light_color = Color( 1, 1, 1, 1 )
+
+[node name="player" type="KinematicBody"]
+script = ExtResource( 1 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0.725497, 0.0378481 )
+shape = SubResource( 1 )
+
+[node name="CamBase" type="Spatial" parent="."]
+
+[node name="Camera" type="Camera" parent="CamBase"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.819351, 5.2978 )
+environment = SubResource( 2 )
+current = true
+
+[node name="Button" type="Button" parent="CamBase/Camera"]
+margin_left = 13.0
+margin_top = 17.0
+margin_right = 218.0
+margin_bottom = 92.0
+text = "Restard"
+
+[node name="Graphics" parent="." instance=ExtResource( 2 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.00689173, 0.00502229, -0.00926524 )
