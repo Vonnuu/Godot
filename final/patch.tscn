@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://tagasi.gd" type="Script" id=1]
+[ext_resource path="res://VT323-Regular.ttf" type="DynamicFontData" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 100
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 50
+font_data = ExtResource( 2 )
+
+[node name="RichTextLabel" type="RichTextLabel"]
+margin_right = 1027.0
+margin_bottom = 600.0
+custom_fonts/normal_font = SubResource( 1 )
+text = "V0.01
+midagi"
+
+[node name="Button" type="Button" parent="."]
+margin_left = 775.0
+margin_top = 497.0
+margin_right = 1022.0
+margin_bottom = 595.0
+custom_fonts/font = SubResource( 2 )
+text = "Tagasi"
+script = ExtResource( 1 )
+
+[connection signal="pressed" from="Button" to="Button" method="_on_Button_pressed"]

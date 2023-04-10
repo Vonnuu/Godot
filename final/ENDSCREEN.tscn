@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://VT323-Regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://ENDSCREEN.gd" type="Script" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 100
+font_data = ExtResource( 1 )
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_right = 1026.0
+margin_bottom = 601.0
+custom_fonts/normal_font = SubResource( 1 )
+text = "Mangu lopp praeguseks. Leveleid veel tulemas. mine vaata kõik ääred ja nurgad põhjalikult läbi enne kui lahkud võid leida midagi huvitavat."
+
+[node name="Button" type="Button" parent="."]
+margin_left = 814.0
+margin_top = 417.0
+margin_right = 1021.0
+margin_bottom = 519.0
+text = "TAGASI"
+
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
